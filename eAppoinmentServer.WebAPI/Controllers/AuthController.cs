@@ -1,11 +1,12 @@
 ﻿using eAppoinmentServer.Application.Features.Auth.Login;
 using eAppoinmentServer.WebAPI.Abstractions;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eAppoinmentServer.WebAPI.Controllers
 {
-
+    [AllowAnonymous]
     public sealed class AuthController : ApiController
     {
         public AuthController(IMediator mediator) : base(mediator)

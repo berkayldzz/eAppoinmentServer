@@ -3,6 +3,8 @@ using eAppoinmentServer.Application.Features.Doctors.CreateDoctor;
 using eAppoinmentServer.Application.Features.Doctors.UpdateDoctor;
 using eAppoinmentServer.Application.Features.Patients.CreatePatient;
 using eAppoinmentServer.Application.Features.Patients.UpdatePatient;
+using eAppoinmentServer.Application.Features.Users.CreateUser;
+using eAppoinmentServer.Application.Features.Users.UpdateUser;
 using eAppoinmentServer.Domain.Entities;
 using eAppoinmentServer.Domain.Enums;
 using System;
@@ -27,6 +29,9 @@ namespace eAppoinmentServer.Application.Mapping
             });
             CreateMap<CreatePatientCommand, Patient>();
             CreateMap<UpdatePatientCommand, Patient>();
+
+            CreateMap<CreateUserCommand, AppUser>();
+            CreateMap<UpdateUserCommand, AppUser>();
            
         }
 
